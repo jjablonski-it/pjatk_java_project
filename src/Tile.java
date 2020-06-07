@@ -57,8 +57,10 @@ public class Tile extends Button {
     public void click() {
         if (!Minesweeper.GameOver) {
             if (!clicked && !flagged) {
+                // If close to bomb
                 if (bombsCount > 0) {
                     this.setText(String.valueOf(bombsCount));
+                    // If bomb
                 } else if (bomb) {
                     this.setText("X");
                     Minesweeper.GameOver = true;

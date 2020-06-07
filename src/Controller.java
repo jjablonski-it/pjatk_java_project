@@ -104,17 +104,13 @@ public class Controller {
         TimerTask task = new TimerTask() {
             @Override
             public void run() {
-                try {
-                    if (Minesweeper.GameOver) {
-                        seconds--;
-                        this.cancel();
-                    }
-                    seconds++;
-                    int sec = seconds % 60;
-                    Platform.runLater(() -> time.setText(seconds / 60 + ":" + (sec < 10 ? "0" + sec : sec)));
-                } catch (Exception e) {
-                    e.printStackTrace();
+                if (Minesweeper.GameOver) {
+                    seconds--;
+                    this.cancel();
                 }
+                seconds++;
+                int sec = seconds % 60;
+                Platform.runLater(() -> time.setText(seconds / 60 + ":" + (sec < 10 ? "0" + sec : sec)));
             }
         };
         timer.scheduleAtFixedRate(task, 1000, 1000);
