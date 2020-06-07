@@ -16,6 +16,7 @@ public class Minesweeper extends Application {
         primaryStage.setTitle("Minesweeper");
         primaryStage.setScene(new Scene(root, 750, 500));
         primaryStage.show();
+        primaryStage.setResizable(false);
         primaryStage.setOnCloseRequest(new EventHandler<WindowEvent>() {
             @Override
             public void handle(WindowEvent t) {

@@ -10,7 +10,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<VBox prefHeight="500.0" prefWidth="750.0" xmlns="http://javafx.com/javafx/10.0.2" xmlns:fx="http://javafx.com/fxml/1"
+<VBox prefHeight="500.0" prefWidth="750.0" minWidth="500.0" minHeight="750.0" xmlns="http://javafx.com/javafx/10.0.2" xmlns:fx="http://javafx.com/fxml/1"
       fx:controller="Controller">
     <children>
         <HBox prefHeight="100.0" prefWidth="200.0" VBox.vgrow="ALWAYS">
